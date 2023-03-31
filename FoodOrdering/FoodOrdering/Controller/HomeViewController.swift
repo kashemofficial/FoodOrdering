@@ -54,4 +54,11 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
         }
        return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0{
+            return 150
+        }
+        return 100
+    }
 }

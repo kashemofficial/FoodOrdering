@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class categoryCvCell: UICollectionViewCell {
     @IBOutlet weak var categoryImageView: UIImageView!
@@ -13,9 +14,12 @@ class categoryCvCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
     
-    
+    func setup(category: DishCategory){
+        categoryTitleLabel.text = category.name
+        categoryImageView.kf.setImage(with: category.image.asUrl)
+    }
 
 }

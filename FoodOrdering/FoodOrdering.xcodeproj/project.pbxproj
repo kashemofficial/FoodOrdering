@@ -34,6 +34,8 @@
 		6C082E5529D61ED200E17EA7 /* DishesCvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C082E5329D61ED200E17EA7 /* DishesCvCell.swift */; };
 		6C082E5629D61ED200E17EA7 /* DishesCvCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C082E5429D61ED200E17EA7 /* DishesCvCell.xib */; };
 		6C082E5829D6229100E17EA7 /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C082E5729D6229100E17EA7 /* DishCategory.swift */; };
+		6C7010D229D6D19F00BF0F39 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7010D129D6D19F00BF0F39 /* String+Extension.swift */; };
+		6C7010D529D6DA8C00BF0F39 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7010D429D6DA8C00BF0F39 /* CardView.swift */; };
 		721CE025975202AF291BD6FC /* Pods_FoodOrdering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE665FD1036B852BF16508C /* Pods_FoodOrdering.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +87,8 @@
 		6C082E5329D61ED200E17EA7 /* DishesCvCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesCvCell.swift; sourceTree = "<group>"; };
 		6C082E5429D61ED200E17EA7 /* DishesCvCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishesCvCell.xib; sourceTree = "<group>"; };
 		6C082E5729D6229100E17EA7 /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
+		6C7010D129D6D19F00BF0F39 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		6C7010D429D6DA8C00BF0F39 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		73D6432337E5BB0EA5C95FE5 /* Pods-FoodOrderingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOrderingTests.release.xcconfig"; path = "Target Support Files/Pods-FoodOrderingTests/Pods-FoodOrderingTests.release.xcconfig"; sourceTree = "<group>"; };
 		7680D5386EBD3D401F47E012 /* Pods-FoodOrderingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOrderingTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodOrderingTests/Pods-FoodOrderingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A10778765D510DE6DAAE0F14 /* Pods-FoodOrdering-FoodOrderingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOrdering-FoodOrderingUITests.release.xcconfig"; path = "Target Support Files/Pods-FoodOrdering-FoodOrderingUITests/Pods-FoodOrdering-FoodOrderingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,13 +165,11 @@
 		6C082DFE29D6115E00E17EA7 /* FoodOrdering */ = {
 			isa = PBXGroup;
 			children = (
-				6C082E3529D6186900E17EA7 /* Views */,
 				6C082E3229D6139700E17EA7 /* System */,
 				6C082E3429D613D000E17EA7 /* Models */,
 				6C082E3329D613B100E17EA7 /* Extensions */,
-				6C082E0329D6115E00E17EA7 /* OnboardingViewController.swift */,
-				6C082E0529D6115E00E17EA7 /* Main.storyboard */,
-				6C082E3C29D61B8100E17EA7 /* HomeViewController.swift */,
+				6C082E3529D6186900E17EA7 /* Views */,
+				6C7010D029D6D04D00BF0F39 /* Controller */,
 				6C082E0B29D6115E00E17EA7 /* Assets.xcassets */,
 				6C082E0D29D6115E00E17EA7 /* LaunchScreen.storyboard */,
 				6C082E1029D6115E00E17EA7 /* Info.plist */,
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				6C082E3A29D61B0B00E17EA7 /* UIView+Extension.swift */,
+				6C7010D129D6D19F00BF0F39 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 		6C082E3529D6186900E17EA7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6C7010D329D6DA5E00BF0F39 /* CardView */,
 				6C082E3F29D61CAA00E17EA7 /* TVCell */,
 				6C082E3E29D61C8500E17EA7 /* CVCell */,
 				6C082E3629D618B800E17EA7 /* OnboardingCvCell.swift */,
@@ -232,10 +236,8 @@
 		6C082E3E29D61C8500E17EA7 /* CVCell */ = {
 			isa = PBXGroup;
 			children = (
-				6C082E4F29D61E7400E17EA7 /* categoryCvCell.swift */,
-				6C082E5029D61E7400E17EA7 /* categoryCvCell.xib */,
-				6C082E5329D61ED200E17EA7 /* DishesCvCell.swift */,
-				6C082E5429D61ED200E17EA7 /* DishesCvCell.xib */,
+				6C7010CE29D6CFDD00BF0F39 /* CategoryCvCell */,
+				6C7010CF29D6CFF500BF0F39 /* DishesCvCell */,
 			);
 			path = CVCell;
 			sourceTree = "<group>";
@@ -275,6 +277,42 @@
 				6C082E4C29D61E1700E17EA7 /* SpecialsTvCell.xib */,
 			);
 			path = SpecialsTvCell;
+			sourceTree = "<group>";
+		};
+		6C7010CE29D6CFDD00BF0F39 /* CategoryCvCell */ = {
+			isa = PBXGroup;
+			children = (
+				6C082E4F29D61E7400E17EA7 /* categoryCvCell.swift */,
+				6C082E5029D61E7400E17EA7 /* categoryCvCell.xib */,
+			);
+			path = CategoryCvCell;
+			sourceTree = "<group>";
+		};
+		6C7010CF29D6CFF500BF0F39 /* DishesCvCell */ = {
+			isa = PBXGroup;
+			children = (
+				6C082E5329D61ED200E17EA7 /* DishesCvCell.swift */,
+				6C082E5429D61ED200E17EA7 /* DishesCvCell.xib */,
+			);
+			path = DishesCvCell;
+			sourceTree = "<group>";
+		};
+		6C7010D029D6D04D00BF0F39 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6C082E0529D6115E00E17EA7 /* Main.storyboard */,
+				6C082E0329D6115E00E17EA7 /* OnboardingViewController.swift */,
+				6C082E3C29D61B8100E17EA7 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6C7010D329D6DA5E00BF0F39 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				6C7010D429D6DA8C00BF0F39 /* CardView.swift */,
+			);
+			path = CardView;
 			sourceTree = "<group>";
 		};
 		BD6A9E35FC4EF6A91367DF4B /* Frameworks */ = {
@@ -544,6 +582,8 @@
 				6C082E4D29D61E1700E17EA7 /* SpecialsTvCell.swift in Sources */,
 				6C082E3929D61A1000E17EA7 /* OnboardingSlide.swift in Sources */,
 				6C082E5129D61E7400E17EA7 /* categoryCvCell.swift in Sources */,
+				6C7010D229D6D19F00BF0F39 /* String+Extension.swift in Sources */,
+				6C7010D529D6DA8C00BF0F39 /* CardView.swift in Sources */,
 				6C082E3729D618B800E17EA7 /* OnboardingCvCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
